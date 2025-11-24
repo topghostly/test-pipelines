@@ -2,7 +2,7 @@ const addAnswers = require("./add-logic");
 
 function addTest() {
   const result = addAnswers(10, 20);
-  return result === 20;
+  return result === 30;
 }
 
 if (addTest()) {
