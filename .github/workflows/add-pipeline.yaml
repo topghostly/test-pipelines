@@ -1,4 +1,4 @@
-name: add-feat-test
+name: Add feature test
 
 on:
   push:
@@ -7,15 +7,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
 
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v5
+      - name: Steup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
-    - name: Steup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
-
-    - name: Run add test
-      run: node add-test.js
+      - name: Run add test
+        run: node add-test.js
